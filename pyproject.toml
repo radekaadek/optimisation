@@ -1,0 +1,58 @@
+[tool.ruff]
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "ANN401",
+  "BLE001",
+  "COM812",
+  "D",
+  "E501",
+  "EXE002",
+  "FIX002",
+  "N801",
+  "N802",
+  "PLR0913",
+  "PLR2004",
+  "PT009",
+  "PT027",
+  "PTH123",
+  "RUF010",
+  "S101",
+  "S106",
+  "S301",
+  "S311",
+  "SLF001",
+  "TD002",
+  "TD004",
+  "TRY003",
+  "UP015",
+  "UP040",
+]
+
+# https://docs.basedpyright.com/latest/configuration/config-files/#diagnostic-settings-defaults
+# rule help:
+# https://docs.basedpyright.com/latest/benefits-over-pyright/new-diagnostic-rules/
+# https://microsoft.github.io/pyright/#/configuration?id=type-check-diagnostics-settings
+[tool.basedpyright]
+pythonVersion = "3.13"
+typeCheckingMode = "all"
+
+reportAttributeAccessIssue = "none"
+
+reportArgumentType = "none"
+reportCallIssue = "none"
+
+reportAny = "none"
+reportExplicitAny = "none"
+
+reportUnknownMemberType = "none"
+
+reportImplicitStringConcatenation = "none"
+
+reportUnknownLambdaType = "none"
+
+reportUnusedCallResult = "none"
+
+reportUninitializedInstanceVariable = "none"
