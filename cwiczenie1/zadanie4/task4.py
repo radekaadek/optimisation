@@ -2,17 +2,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import linprog
 
-try:
-    data = np.loadtxt("data01.csv", delimiter=",")
-    x = data[:, 0]
-    y = data[:, 1]
-except OSError:
-    print("Nie znaleziono pliku data01.csv. Generuję przykładowe dane do testu...")
-    np.random.seed(42)
-    x = np.linspace(0, 10, 50)
-    y = 0.7 * x + 2.3 + np.random.normal(0, 0.2, 50)
-    y[5] = 120
-    y[40] = -10
+data = np.loadtxt("data01.csv", delimiter=",")
+x = data[:, 0]
+y = data[:, 1]
 
 N = len(x)
 
