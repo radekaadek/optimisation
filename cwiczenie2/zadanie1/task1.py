@@ -37,6 +37,7 @@ def get_base_constraints(
     fixed_indices: np.ndarray,
     y_fixed: np.ndarray,
     max_curvature: float,
+    *,
     include_curvature: bool = True,
 ) -> list[cp.Constraint]:
     """Generates the base constraints for the isoperimetric problem."""
@@ -69,6 +70,7 @@ def solve_problem(
     fixed_indices: np.ndarray,
     y_fixed: np.ndarray,
     max_curvature: float,
+    *,
     include_curvature: bool = True,
     non_negative: bool = False,
 ) -> tuple[cp.Variable, float]:
@@ -123,12 +125,12 @@ def run_isoperimetric_tasks() -> None:
     """Main execution function."""
     data = load_isoperimetric_data("isoPerimData.mat")
 
-    n_nodes: int = data["n_nodes"]
-    a_val: float = data["a_val"]
-    length_limit: float = data["length_limit"]
-    max_curvature: float = data["max_curvature"]
-    fixed_indices: np.ndarray = data["fixed_indices"]
-    y_fixed: np.ndarray = data["y_fixed"]
+    n_nodes = data["n_nodes"]
+    a_val = data["a_val"]
+    length_limit = data["length_limit"]
+    max_curvature = data["max_curvature"]
+    fixed_indices = data["fixed_indices"]
+    y_fixed = data["y_fixed"]
 
     h_step = a_val / n_nodes
     x_vals = np.linspace(0, a_val, n_nodes + 1) / a_val
