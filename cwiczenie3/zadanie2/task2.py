@@ -11,7 +11,7 @@ t = data["t"].flatten()
 n = len(y_tilde)
 m = n - 1
 
-D = sp.diags([-1, 1], [0, 1], shape=(m, n))
+D = sp.diags([-1, 1], [0, 1], shape=(m, n), dtype=None)
 
 I_n = sp.eye(n)
 I_m = sp.eye(m)
