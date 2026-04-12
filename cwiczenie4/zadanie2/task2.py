@@ -97,4 +97,4 @@ plt.title("Wykres czasowo-częstotliwościowy")
 plt.legend(loc="lower center")
 
 plt.tight_layout()
-plt.show()
+plt.savefig("results.png")

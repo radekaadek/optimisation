@@ -146,4 +146,4 @@ plt.plot(hist_d_np[:, 0], hist_d_np[:, 1], "ro-", label="Iteracje (Z tłumieniem
 plt.title("Metoda Newtona z Tłumieniem")
 plt.xlabel("$x_1$")
 plt.ylabel("$x_2$")
-plt.show()
+plt.savefig("results.png")

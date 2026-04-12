@@ -24,6 +24,7 @@ ignore = [
   "S301",
   "S311",
   "SLF001",
+  "T201",
   "TD002",
   "TD004",
   "TRY003",
@@ -38,6 +39,8 @@ ignore = [
 [tool.basedpyright]
 pythonVersion = "3.13"
 typeCheckingMode = "all"
+
+reportUnknownVariableType = "none"
 
 reportAttributeAccessIssue = "none"
 
